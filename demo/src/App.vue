@@ -75,9 +75,6 @@ export default {
 		 */
 		trans(data) {
 			const result = []
-			//.img {
-			//
-			// }
 			for (const datum of data) {
 				result.push(`<div class='${this.toStrigula(datum.name)}'>${datum.type === 'TEXT' ? datum['characters'] : ''}`);
 				for (const datumKey in datum) {
