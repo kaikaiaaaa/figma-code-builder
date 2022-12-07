@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+     <div id="template" v-html="htmlData"></div>
 		<div class='device-item'><div class='img'>
 		</div>
 			<div class='info'>
@@ -50,7 +51,8 @@ export default {
 		return {
 			figma,
 			str: '',
-			map
+			map,
+  htmlData: ''
 		}
 	},
 	mounted() {
@@ -67,6 +69,7 @@ export default {
 			this.str = temp
 			console.log('this.str', this.str);
 			console.log('this.style', style);
+   this.htmlData = temp
 		},
 		/**
 		 * children转换
